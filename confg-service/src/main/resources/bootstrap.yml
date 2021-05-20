@@ -1,7 +1,15 @@
-server :
-  port : 80881
+server:
+  port: 80881
 
-spring :
-  cloud :
-    config :
-      
+spring:
+  cloud:
+    config:
+      git: https://github.com/static-x03/microserviceApp
+      searchPaths: confg-data
+      username: ${GIT_USER}
+      password: ${GIT_PASS}
+
+  security:
+    user:
+      name: root
+      password: s3cr3t
