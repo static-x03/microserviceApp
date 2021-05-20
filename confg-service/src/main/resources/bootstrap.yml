@@ -1,0 +1,7 @@
+server :
+  port : 80881
+
+spring :
+  cloud :
+    config :
+      
