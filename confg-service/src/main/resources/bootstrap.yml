@@ -1,17 +1,14 @@
 server:
   port: 80881
-composite :
-  type: composite
 
 spring:
-  profiles:
-    active: native
   cloud:
     config:
-      git: https://github.com/static-x03/microserviceApp
-      searchPaths: confg-data
-      username: ${GIT_USER}
-      password: ${GIT_PASS}
+      git:
+        uri: https://github.com/static-x03/microserviceApp
+        searchPaths: confg-data
+        username: ${GIT_USER}
+        password: ${GIT_PASS}
   security:
     user:
       name: root
