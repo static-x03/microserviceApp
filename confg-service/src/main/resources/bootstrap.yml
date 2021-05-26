@@ -1,14 +1,15 @@
 server:
-  port: 80881
+  port: 8081
 
 spring:
   cloud:
     config:
-      git:
-        uri: https://github.com/static-x03/microserviceApp
-        searchPaths: confg-data
-        username: ${GIT_USER}
-        password: ${GIT_PASS}
+      server:
+        git:
+          uri: https://github.com/static-x03/microserviceApp
+          searchPaths: confg-data
+          username: ${GIT_USER}
+          password: ${GIT_PASS}
   security:
     user:
       name: root
