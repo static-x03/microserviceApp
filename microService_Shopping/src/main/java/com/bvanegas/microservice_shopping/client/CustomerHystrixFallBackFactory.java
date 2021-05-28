@@ -2,7 +2,9 @@ package com.bvanegas.microservice_shopping.client;
 
 import com.bvanegas.microservice_shopping.modelo.Customer;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomerHystrixFallBackFactory implements CustomerClient{
     @Override
     public ResponseEntity<Customer> getCustomer(Long id) {
