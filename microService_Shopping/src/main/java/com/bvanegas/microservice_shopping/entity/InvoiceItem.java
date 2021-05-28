@@ -1,5 +1,6 @@
 package com.bvanegas.microservice_shopping.entity;
 
+import com.bvanegas.microservice_shopping.modelo.Product;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,6 +25,9 @@ public class InvoiceItem {
 
     @Transient
     private Double subTotal;
+
+    @Transient
+    private Product product;
 
     public Double getSubtotal(){
 

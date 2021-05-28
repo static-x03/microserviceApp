@@ -1,5 +1,6 @@
 package com.bvanegas.microservice_shopping.entity;
 
+import com.bvanegas.microservice_shopping.modelo.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
@@ -36,6 +37,9 @@ public class Invoice {
     private List<InvoiceItem> items;
 
     private String status;
+
+    @Transient
+    private Customer customer;
 
     public Invoice(){items = new ArrayList<>(); }
 
